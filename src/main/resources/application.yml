@@ -1,10 +1,10 @@
 spring:
   application:
-    name: social-media
+    name: gw
   data:
     mongodb:
-      username: root
-      password: rootpassword
+      username: social
+      password: social123456789
       host: localhost
       port: 27017
       database: social-media
