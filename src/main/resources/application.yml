@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: social-media
+  data:
+    mongodb:
+      username: root
+      password: rootpassword
+      host: localhost
+      port: 27017
+      database: social-media
+      auto-index-creation: true
