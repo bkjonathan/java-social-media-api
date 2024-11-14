@@ -19,6 +19,7 @@ public class Post {
     private String videoUrl;
     private int likes;
     private int comments;
+    private User createdBy;
     private String createdAt;
     private String updatedAt;
 }

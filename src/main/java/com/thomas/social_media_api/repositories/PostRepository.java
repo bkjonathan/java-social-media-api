@@ -1,4 +1,4 @@
-package com.thomas.social_media_api.repository;
+package com.thomas.social_media_api.repositories;
 
 import com.thomas.social_media_api.models.Post;
 import org.springframework.data.mongodb.repository.MongoRepository;
