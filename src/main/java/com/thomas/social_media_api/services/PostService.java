@@ -13,21 +13,21 @@ import java.util.List;
 public class PostService {
     private final PostRepository postRepository;
 
-    private Post createPost(Post post) {
+    public Post createPost(Post post) {
         User createdBy = User.builder().id("1").username("thomas").build();
         post.setCreatedBy(createdBy);
         return postRepository.save(post);
     }
 
-    private List<Post> getAllPosts() {
+    public List<Post> getAllPosts() {
         return postRepository.findAll();
     }
 
-    private Post getPostById(String id) {
+    public Post getPostById(String id) {
         return postRepository.findById(id).orElseThrow(()->new RuntimeException("Post not found"));
     }
 
-    private Post updatePost(String id,String title, String content,List<String>tags, Post post) {
+    public Post updatePost(String id,String title, String content,List<String>tags) {
         Post postToUpdate = getPostById(id);
         postToUpdate.setTitle(title);
         postToUpdate.setContent(content);
@@ -35,7 +35,7 @@ public class PostService {
         return postRepository.save(postToUpdate);
     }
 
-    private void deletePost(String id) {
+    public void deletePost(String id) {
         postRepository.deleteById(id);
     }
 }
